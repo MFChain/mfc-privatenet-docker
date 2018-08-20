@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mfc-privnet:
+    build: .
+    container_name: mfc-privnet
+    ports:
+      - 10333-10336:10333-10336
+      - 20333-20336:20333-20336
+      - 30333-30336:30333-30336
+    volumes:
+      - /opt/node1/mfc-cli/Chain
+      - /opt/node2/mfc-cli/Chain
+      - /opt/node3/mfc-cli/Chain
+      - /opt/node4/mfc-cli/Chain
